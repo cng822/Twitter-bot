@@ -17,7 +17,7 @@ for tweet in tweepy.Cursor(api.search, search).items(numberOfTweets):
         tweet.retweet()
         api.update_status('WayV Liked')
         time.sleep(20)
-        tweet.destroy_favorite()
+        # tweet.destroy_favorite()
     except tweepy.TweepError as e: 
         print(e.reason)
     except StopIteration:
